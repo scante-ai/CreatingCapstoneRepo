@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shell" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-GJ-H6C">
+                                <rect key="frame" x="-8" y="0.0" width="422" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epN-SD-rfx">
+                                <rect key="frame" x="81" y="317" width="244" height="62"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="49"/>
+                                <color key="textColor" red="0.96848052740000001" green="0.91723498660000002" blue="0.84269406000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.27792945499999999" green="0.64500951770000003" blue="0.72550660369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="9" height="-1"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jlh-GJ-H6C" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="EqQ-Fk-Z9W"/>
+                            <constraint firstItem="jlh-GJ-H6C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jvm-5X-bJf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="epN-SD-rfx" secondAttribute="bottom" constant="483" id="LvH-va-QKN"/>
+                            <constraint firstItem="epN-SD-rfx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="PKD-1o-c33"/>
+                            <constraint firstItem="epN-SD-rfx" firstAttribute="centerX" secondItem="jlh-GJ-H6C" secondAttribute="centerX" id="Ti5-Kk-mrR"/>
+                            <constraint firstItem="jlh-GJ-H6C" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-28" id="Vht-QB-pEs"/>
+                            <constraint firstItem="epN-SD-rfx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="273" id="gef-9u-7oY"/>
+                            <constraint firstItem="jlh-GJ-H6C" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rZN-FA-v3o"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shell" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
