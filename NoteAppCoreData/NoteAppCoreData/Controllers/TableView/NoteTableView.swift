@@ -67,27 +67,27 @@ class NoteTableView: UITableViewController
 	{
 		tableView.reloadData()
 	}
-	//editing note when selected
-	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-	{//arrow going to NoteDetail
-		self.performSegue(withIdentifier: "editNote", sender: self)
-	}
-	//prepare segue
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-	{
-		if(segue.identifier == "editNote")
-		{
-			let indexPath = tableView.indexPathForSelectedRow!
-			
-			let noteDetail = segue.destination as? NoteDetailVC
-			//select Note
-			let selectedNote : Note!
-			selectedNote = nonDeletedNotes()[indexPath.row]
-			noteDetail!.selectedNote = selectedNote
-			
-			tableView.deselectRow(at: indexPath, animated: true)
-		}
-	}
+//	//editing note when selected
+//	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+//	{//arrow going to NoteDetail
+//		self.performSegue(withIdentifier: "editNote", sender: self)
+//	}
+//	//prepare segue
+//	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//	{
+//		if(segue.identifier == "editNote")
+//		{
+//			let indexPath = tableView.indexPathForSelectedRow!
+//			
+//			let noteDetail = segue.destination as? NoteDetailVC
+//			//select Note
+//			let selectedNote : Note!
+//			selectedNote = nonDeletedNotes()[indexPath.row]
+//			noteDetail!.selectedNote = selectedNote
+//			
+//			tableView.deselectRow(at: indexPath, animated: true)
+//		}
+//	}
 	
 	
 }

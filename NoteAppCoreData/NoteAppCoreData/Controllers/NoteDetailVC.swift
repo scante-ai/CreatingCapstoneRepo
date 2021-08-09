@@ -36,6 +36,9 @@ class NoteDetailVC: UIViewController
 			newNote.id = noteList.count as NSNumber
 			newNote.title = titleTF.text
 			newNote.desc = descTV.text
+            if (newNote.title != nil && newNote.desc != nil) {
+                
+            
 			do
 			{//saving to noteList array
 				try context.save()
@@ -45,7 +48,9 @@ class NoteDetailVC: UIViewController
 			catch
 			{
 				print("context save error")
-			}
+            }
+                
+            }
 		}
 		
         //if selected note is not empty
