@@ -198,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="506.91964285714283"/>
         </scene>
-        <!--Diary Entries-->
+        <!--Note Table View-->
         <scene sceneID="Mj3-aQ-UEu">
             <objects>
                 <tableViewController id="wH4-ic-0n0" customClass="NoteTableView" customModule="NoteAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
@@ -252,7 +252,7 @@
                             <outlet property="delegate" destination="wH4-ic-0n0" id="3VG-4Z-ebt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Diary Entries" id="gih-L1-lEg">
+                    <navigationItem key="navigationItem" id="gih-L1-lEg">
                         <barButtonItem key="rightBarButtonItem" id="uzj-Vf-npK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6VP-Kq-VyZ">
                                 <rect key="frame" x="364" y="7" width="30" height="30"/>
@@ -265,15 +265,12 @@
                             <color key="tintColor" red="0.77568455400000003" green="0.5" blue="0.96121450809999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="editNote" id="xDb-i0-8vv"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afw-LK-M4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829" y="-984"/>
         </scene>
-        <!--Excerpt-->
+        <!--Note DetailVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NoteDetailVC" customModule="NoteAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
@@ -288,10 +285,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lvu-R3-vUO">
-                                <rect key="frame" x="52" y="311" width="292" height="471"/>
+                                <rect key="frame" x="52" y="311" width="292" height="131"/>
                                 <color key="backgroundColor" red="0.96848052740000001" green="0.91723498660000002" blue="0.84269406000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="471" id="U3j-gO-t0I"/>
+                                    <constraint firstAttribute="height" constant="131" id="U3j-gO-t0I"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -327,6 +324,37 @@
                                     <segue destination="wHk-WK-yLw" kind="show" id="laQ-jt-vY4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's your wavelength today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWX-kp-Zab">
+                                <rect key="frame" x="88" y="482" width="238" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0J-DR-Zg0">
+                                <rect key="frame" x="150" y="563" width="46" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="30"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnf-zd-xA4">
+                                <rect key="frame" x="231" y="563" width="48" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="15"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV1-Ye-XSS">
+                                <rect key="frame" x="326" y="563" width="44" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="0"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1e-ug-4hc">
+                                <rect key="frame" x="50" y="563" width="47" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="50"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.66981226250000003" green="0.88198825589999996" blue="0.88653364089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -338,7 +366,7 @@
                             <constraint firstItem="RDz-Ti-T5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="272" id="KBy-cf-3Bq"/>
                             <constraint firstItem="PvM-t2-8mg" firstAttribute="top" secondItem="cyW-2z-u83" secondAttribute="bottom" constant="30" id="MNY-uE-EVQ"/>
                             <constraint firstItem="L8V-zG-c2k" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZGG-1G-GwQ"/>
-                            <constraint firstItem="z0s-qc-diC" firstAttribute="top" secondItem="Lvu-R3-vUO" secondAttribute="bottom" constant="25" id="gnN-Uc-Hnt"/>
+                            <constraint firstItem="z0s-qc-diC" firstAttribute="top" secondItem="Lvu-R3-vUO" secondAttribute="bottom" constant="365" id="gnN-Uc-Hnt"/>
                             <constraint firstItem="cyW-2z-u83" firstAttribute="top" secondItem="L8V-zG-c2k" secondAttribute="bottom" constant="5" id="hXp-hy-HBs"/>
                             <constraint firstItem="Lvu-R3-vUO" firstAttribute="leading" secondItem="cyW-2z-u83" secondAttribute="leading" id="hk7-2L-aNZ"/>
                             <constraint firstItem="L8V-zG-c2k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="krF-yk-Tcn"/>
@@ -349,10 +377,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z0s-qc-diC" secondAttribute="trailing" constant="141" id="wHB-4u-UDo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Excerpt" id="yLh-pT-4cO">
+                    <navigationItem key="navigationItem" id="yLh-pT-4cO">
                         <barButtonItem key="rightBarButtonItem" id="uFh-cn-Ik8">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Kgb-iJ-Pck">
-                                <rect key="frame" x="302" y="4" width="92" height="36"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Kgb-iJ-Pck">
+                                <rect key="frame" x="50" y="4" width="344" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -376,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="-984"/>
+            <point key="canvasLocation" x="1837.68115942029" y="-984.375"/>
         </scene>
         <!--Wave Options View Controller-->
         <scene sceneID="q0U-Nj-Lxg">
@@ -553,7 +581,6 @@
         <!--Wave One View Controller-->
         <scene sceneID="EOp-zt-vY2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eng-j5-6sJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="HVe-h1-np5" customClass="WaveOneViewController" customModule="NoteAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ee-97-tzd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -586,6 +613,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JTd-Un-mu4"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eng-j5-6sJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4565" y="-2008"/>
         </scene>
@@ -608,9 +636,6 @@
             <point key="canvasLocation" x="-1606" y="-52"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="9Yt-L9-sGy"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="mug" width="1024" height="1024"/>
         <image name="petals" width="1024" height="1024"/>
