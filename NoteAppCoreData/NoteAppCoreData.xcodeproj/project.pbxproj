@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		2E37155F25C101E20037351E /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E37155E25C101E20037351E /* NoteCell.swift */; };
 		2E37156225C102060037351E /* NoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E37156125C102060037351E /* NoteTableView.swift */; };
 		2E91899925C2BCDC00A3C567 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91899825C2BCDC00A3C567 /* Note.swift */; };
+		607369BE26C1754100E14ADF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 607369BD26C1754100E14ADF /* Lottie */; };
+		607369C026C1762400E14ADF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607369BF26C1762400E14ADF /* HomeViewController.swift */; };
+		607369C226C178BC00E14ADF /* wave-loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 607369C126C178BC00E14ADF /* wave-loader.json */; };
 		607F9F3826BF288400EFB172 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F9F3726BF288400EFB172 /* NotificationsViewController.swift */; };
 		607F9F3A26BF31CD00EFB172 /* WaveExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F9F3926BF31CD00EFB172 /* WaveExplanationViewController.swift */; };
 		607F9F3C26BF328B00EFB172 /* ReturningMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F9F3B26BF328B00EFB172 /* ReturningMainViewController.swift */; };
@@ -42,6 +45,8 @@
 		2E37155E25C101E20037351E /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		2E37156125C102060037351E /* NoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableView.swift; sourceTree = "<group>"; };
 		2E91899825C2BCDC00A3C567 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		607369BF26C1762400E14ADF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		607369C126C178BC00E14ADF /* wave-loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wave-loader.json"; sourceTree = "<group>"; };
 		607F9F3726BF288400EFB172 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsViewController.swift; path = NoteAppCoreData/NotificationsViewController.swift; sourceTree = SOURCE_ROOT; };
 		607F9F3926BF31CD00EFB172 /* WaveExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveExplanationViewController.swift; sourceTree = "<group>"; };
 		607F9F3B26BF328B00EFB172 /* ReturningMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturningMainViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607369BE26C1754100E14ADF /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +90,7 @@
 		2E37154525C0FB980037351E /* NoteAppCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				607369C126C178BC00E14ADF /* wave-loader.json */,
 				2E37154625C0FB980037351E /* AppDelegate.swift */,
 				2E37154825C0FB980037351E /* SceneDelegate.swift */,
 				607F9F3526BF091900EFB172 /* Data Model */,
@@ -97,6 +104,7 @@
 		607F9F3326BF07C300EFB172 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				607369BF26C1762400E14ADF /* HomeViewController.swift */,
 				607F9F3926BF31CD00EFB172 /* WaveExplanationViewController.swift */,
 				607F9F3B26BF328B00EFB172 /* ReturningMainViewController.swift */,
 				607F9F3726BF288400EFB172 /* NotificationsViewController.swift */,
@@ -189,6 +197,9 @@
 			dependencies = (
 			);
 			name = NoteAppCoreData;
+			packageProductDependencies = (
+				607369BD26C1754100E14ADF /* Lottie */,
+			);
 			productName = NoteAppCoreData;
 			productReference = 2E37154325C0FB980037351E /* NoteAppCoreData.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 2E37153A25C0FB980037351E;
+			packageReferences = (
+				607369BC26C1754100E14ADF /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 2E37154425C0FB980037351E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +246,7 @@
 			files = (
 				2E37155625C0FB9B0037351E /* LaunchScreen.storyboard in Resources */,
 				2E37155325C0FB9B0037351E /* Assets.xcassets in Resources */,
+				607369C226C178BC00E14ADF /* wave-loader.json in Resources */,
 				2E37154E25C0FB980037351E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +263,7 @@
 				607F9F6626BF5CEF00EFB172 /* WaveThreeViewController.swift in Sources */,
 				607F9F4026BF491900EFB172 /* WaveOneViewController.swift in Sources */,
 				607F9F3A26BF31CD00EFB172 /* WaveExplanationViewController.swift in Sources */,
+				607369C026C1762400E14ADF /* HomeViewController.swift in Sources */,
 				607F9F3C26BF328B00EFB172 /* ReturningMainViewController.swift in Sources */,
 				607F9F6926BF5D1900EFB172 /* Wave3SwiftUIView.swift in Sources */,
 				2E37156225C102060037351E /* NoteTableView.swift in Sources */,
@@ -461,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		607369BC26C1754100E14ADF /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		607369BD26C1754100E14ADF /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 607369BC26C1754100E14ADF /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2E37154F25C0FB980037351E /* NoteAppCoreData.xcdatamodeld */ = {

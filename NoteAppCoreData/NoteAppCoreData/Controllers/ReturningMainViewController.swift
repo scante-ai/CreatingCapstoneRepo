@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Lottie
+
 
 class ReturningMainViewController: UIViewController {
 
@@ -15,12 +17,23 @@ class ReturningMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lottieAnimation()
         
         
 
         // Do any additional setup after loading the view.
     }
-    
+    func lottieAnimation(){
+        let animationView = AnimationView(name: "wave-loader")
+        animationView.contentMode = .scaleAspectFit
+        view.addSubview(animationView)
+        animationView.play()
+        animationView.loopMode = .loop
+        //bigger y, lower the image
+        animationView.frame = CGRect(x: 87, y: 720, width: 240, height: 128)
+//        animationView.center = view.center
+        
+    }
 
     /*
     // MARK: - Navigation
