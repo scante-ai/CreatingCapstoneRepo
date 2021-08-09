@@ -19,7 +19,6 @@
 		2E91899925C2BCDC00A3C567 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91899825C2BCDC00A3C567 /* Note.swift */; };
 		4B23E35F519145D051F5C22C /* Pods_NoteAppCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F6A6FE398A3832A37C0353 /* Pods_NoteAppCoreData.framework */; };
 		607369BE26C1754100E14ADF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 607369BD26C1754100E14ADF /* Lottie */; };
-		607369C026C1762400E14ADF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607369BF26C1762400E14ADF /* HomeViewController.swift */; };
 		607369C226C178BC00E14ADF /* wave-loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 607369C126C178BC00E14ADF /* wave-loader.json */; };
 		607F9F3826BF288400EFB172 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F9F3726BF288400EFB172 /* NotificationsViewController.swift */; };
 		607F9F3A26BF31CD00EFB172 /* WaveExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F9F3926BF31CD00EFB172 /* WaveExplanationViewController.swift */; };
@@ -47,7 +46,6 @@
 		2E37155E25C101E20037351E /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		2E37156125C102060037351E /* NoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableView.swift; sourceTree = "<group>"; };
 		2E91899825C2BCDC00A3C567 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		607369BF26C1762400E14ADF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		607369C126C178BC00E14ADF /* wave-loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wave-loader.json"; sourceTree = "<group>"; };
 		607F9F3726BF288400EFB172 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsViewController.swift; path = NoteAppCoreData/NotificationsViewController.swift; sourceTree = SOURCE_ROOT; };
 		607F9F3926BF31CD00EFB172 /* WaveExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveExplanationViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 		607F9F3326BF07C300EFB172 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				607369BF26C1762400E14ADF /* HomeViewController.swift */,
 				607F9F3926BF31CD00EFB172 /* WaveExplanationViewController.swift */,
 				607F9F3B26BF328B00EFB172 /* ReturningMainViewController.swift */,
 				607F9F3726BF288400EFB172 /* NotificationsViewController.swift */,
@@ -194,7 +191,6 @@
 				7F66A98DE5B405E9C8FB5BCF /* Pods-NoteAppCoreData.debug.xcconfig */,
 				C4F853FCD3C32199AEEB0548 /* Pods-NoteAppCoreData.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -332,7 +328,6 @@
 				607F9F6626BF5CEF00EFB172 /* WaveThreeViewController.swift in Sources */,
 				607F9F4026BF491900EFB172 /* WaveOneViewController.swift in Sources */,
 				607F9F3A26BF31CD00EFB172 /* WaveExplanationViewController.swift in Sources */,
-				607369C026C1762400E14ADF /* HomeViewController.swift in Sources */,
 				607F9F3C26BF328B00EFB172 /* ReturningMainViewController.swift in Sources */,
 				607F9F6926BF5D1900EFB172 /* Wave3SwiftUIView.swift in Sources */,
 				2E37156225C102060037351E /* NoteTableView.swift in Sources */,
