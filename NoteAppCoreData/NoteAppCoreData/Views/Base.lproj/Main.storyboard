@@ -118,6 +118,51 @@
             </objects>
             <point key="canvasLocation" x="829" y="-230"/>
         </scene>
+        <!--Single PageVC-->
+        <scene sceneID="y85-BO-B4t">
+            <objects>
+                <viewController id="4PW-ye-D4k" customClass="SinglePageVC" customModule="NoteAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pee-a7-jaa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYD-VV-TZz">
+                                <rect key="frame" x="46" y="123" width="87.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ps4-Rn-4gd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzb-ar-9Rv">
+                                <rect key="frame" x="46" y="158" width="87.5" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wavelength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epL-Vb-sP7">
+                                <rect key="frame" x="46" y="216" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QJc-tQ-HEa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dzb-ar-9Rv" firstAttribute="top" secondItem="mYD-VV-TZz" secondAttribute="bottom" id="1bj-QA-UF6"/>
+                            <constraint firstItem="dzb-ar-9Rv" firstAttribute="centerX" secondItem="mYD-VV-TZz" secondAttribute="centerX" id="GSO-uI-Hh8"/>
+                            <constraint firstItem="dzb-ar-9Rv" firstAttribute="width" secondItem="mYD-VV-TZz" secondAttribute="width" id="LjI-pN-2gB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="B7D-gn-80T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Xo-Bp-H8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="-664.28571428571422"/>
+        </scene>
         <!--Notifications View Controller-->
         <scene sceneID="gyc-6H-gab">
             <objects>
@@ -244,6 +289,7 @@
                                 <connections>
                                     <outlet property="descLabel" destination="n9i-P9-I7P" id="2v0-cH-9ff"/>
                                     <outlet property="titleLabel" destination="mrY-0b-lYc" id="rcH-ay-a7H"/>
+                                    <segue destination="4PW-ye-D4k" kind="show" identifier="notePreview" id="q81-ie-Ccv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -385,7 +431,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.68115942029" y="-984.375"/>
+            <point key="canvasLocation" x="1820" y="-1349"/>
         </scene>
         <!--Wave Options View Controller-->
         <scene sceneID="q0U-Nj-Lxg">

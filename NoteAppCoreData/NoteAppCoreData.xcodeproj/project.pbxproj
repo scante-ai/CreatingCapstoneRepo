@@ -17,6 +17,7 @@
 		2E37155F25C101E20037351E /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E37155E25C101E20037351E /* NoteCell.swift */; };
 		2E37156225C102060037351E /* NoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E37156125C102060037351E /* NoteTableView.swift */; };
 		2E91899925C2BCDC00A3C567 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91899825C2BCDC00A3C567 /* Note.swift */; };
+		3EC5736026C2E401001AC706 /* SinglePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5735F26C2E401001AC706 /* SinglePageVC.swift */; };
 		4B23E35F519145D051F5C22C /* Pods_NoteAppCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F6A6FE398A3832A37C0353 /* Pods_NoteAppCoreData.framework */; };
 		607369BE26C1754100E14ADF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 607369BD26C1754100E14ADF /* Lottie */; };
 		607369C226C178BC00E14ADF /* wave-loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 607369C126C178BC00E14ADF /* wave-loader.json */; };
@@ -46,6 +47,7 @@
 		2E37155E25C101E20037351E /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		2E37156125C102060037351E /* NoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableView.swift; sourceTree = "<group>"; };
 		2E91899825C2BCDC00A3C567 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		3EC5735F26C2E401001AC706 /* SinglePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePageVC.swift; sourceTree = "<group>"; };
 		607369C126C178BC00E14ADF /* wave-loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wave-loader.json"; sourceTree = "<group>"; };
 		607F9F3726BF288400EFB172 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsViewController.swift; path = NoteAppCoreData/NotificationsViewController.swift; sourceTree = SOURCE_ROOT; };
 		607F9F3926BF31CD00EFB172 /* WaveExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveExplanationViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				607F9F3B26BF328B00EFB172 /* ReturningMainViewController.swift */,
 				607F9F3726BF288400EFB172 /* NotificationsViewController.swift */,
 				2E37154A25C0FB980037351E /* NoteDetailVC.swift */,
+				3EC5735F26C2E401001AC706 /* SinglePageVC.swift */,
 				607F9F3426BF086B00EFB172 /* TableView */,
 				607F9F4126BF49B000EFB172 /* Wave Animation */,
 			);
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607F9F3E26BF36D600EFB172 /* WaveOptionsViewController.swift in Sources */,
+				3EC5736026C2E401001AC706 /* SinglePageVC.swift in Sources */,
 				2E37154B25C0FB980037351E /* NoteDetailVC.swift in Sources */,
 				607F9F6626BF5CEF00EFB172 /* WaveThreeViewController.swift in Sources */,
 				607F9F4026BF491900EFB172 /* WaveOneViewController.swift in Sources */,

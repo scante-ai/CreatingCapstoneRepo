@@ -71,11 +71,14 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
                 let newNote = Note(entity: entity!, insertInto: context)
                 newNote.id = noteList.count as NSNumber
                 newNote.title = titleTF.text
-                newNote.desc = descTV.text
+                newNote.desc = descTV.text //mandatory
                 newNote.deletedDate = Date()
                 // use global variable here (self.waves also works ???)
-                newNote.wavelength = waves
+                newNote.wavelength = waves //mandatory
+                
+//                if (newNote.wavelength != "" || newNote.desc != "") {
                 if (newNote.title != nil && newNote.desc != nil) {
+
                     
                 
                 do
