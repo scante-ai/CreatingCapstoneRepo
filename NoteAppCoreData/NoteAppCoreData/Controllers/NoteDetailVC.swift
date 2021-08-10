@@ -45,8 +45,8 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     }
     // Capture the picker view selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        var selection = pickerData[component][row]
-        print(selection)
+        var waves = pickerData[component][row]
+        print(waves)
         // This method is triggered whenever the user makes a change to the picker selection
         // The parameter named row and component represents what was selected...
     }
@@ -68,6 +68,8 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
                 newNote.id = noteList.count as NSNumber
                 newNote.title = titleTF.text
                 newNote.desc = descTV.text
+                newNote.deletedDate = Date()
+//                newNote.wavelength = pickerData[component][row]
                 if (newNote.title != nil && newNote.desc != nil) {
                     
                 
@@ -110,30 +112,29 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
             }
         }
         //Deleting Note
-        @IBAction func DeleteNote(_ sender: Any)
-        {//core data persistent container
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-            //fetching info from Note entity
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
-            do {
-                let results:NSArray = try context.fetch(request) as NSArray
-                for result in results
-                {//if note is slected, delete
-                    let note = result as! Note
-                    if(note == selectedNote)
-                    {
-                        note.deletedDate = Date()
-                        try context.save()
-                        navigationController?.popViewController(animated: true) //pop up display
-                    }
-                }
-            }
-            catch
-            {
-                print("Fetch Failed")
-            }
-        }
-        
+//        @IBAction func DeleteNote(_ sender: Any)
+//        {//core data persistent container
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+//            //fetching info from Note entity
+//            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+//            do {
+//                let results:NSArray = try context.fetch(request) as NSArray
+//                for result in results
+//                {//if note is slected, delete
+//                    let note = result as! Note
+//                    if(note == selectedNote)
+//                    {
+//                        note.deletedDate = Date()
+//                        try context.save()
+//                        navigationController?.popViewController(animated: true) //pop up display
+//                    }
+//                }
+//            }
+//            catch
+//            {
+//                print("Fetch Failed")
+//            }
+//        }
+//
     }
-
