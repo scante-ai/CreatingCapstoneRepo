@@ -9,5 +9,5 @@ class Note: NSManagedObject
 	@NSManaged var desc: String!
 	@NSManaged var deletedDate: Date?
     
-//    @NSManaged var wavelength: String!
+    @NSManaged var wavelength: String!
 }
