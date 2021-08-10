@@ -12,7 +12,7 @@ class NoteTableView: UITableViewController
 		var noDeleteNoteList = [Note]()
 		for note in noteList
 		{
-			if(note.deletedDate == nil)
+			if(note.deletedDate != nil)
 			{
 				noDeleteNoteList.append(note)
 			}
@@ -32,9 +32,11 @@ class NoteTableView: UITableViewController
 				let results:NSArray = try context.fetch(request) as NSArray
 				for result in results
 				{//append fetched note to results
+                    print(result)
 					let note = result as! Note
 					noteList.append(note)
 				}
+                print(noteList)
 			}
 			catch
 			{
@@ -53,6 +55,8 @@ class NoteTableView: UITableViewController
 		
 		noteCell.titleLabel.text = thisNote.title
 		noteCell.descLabel.text = thisNote.desc
+        //
+//        noteCell.dateLabel = thisNote.deletedDate
 		
 		return noteCell
 	}

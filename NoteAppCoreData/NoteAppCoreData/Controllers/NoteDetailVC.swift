@@ -2,6 +2,9 @@ import UIKit
 import CoreData
 //entering note info
 class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    // Make global variable
+    var waves:String = ""
 
 //Title text Field
 	@IBOutlet weak var titleTF: UITextField!
@@ -45,8 +48,9 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     }
     // Capture the picker view selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        var selection = pickerData[component][row]
-        print(selection)
+        // Make var global using self
+        self.waves = pickerData[component][row]
+        print(waves)
         // This method is triggered whenever the user makes a change to the picker selection
         // The parameter named row and component represents what was selected...
     }
@@ -68,6 +72,10 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
                 newNote.id = noteList.count as NSNumber
                 newNote.title = titleTF.text
                 newNote.desc = descTV.text
+                // self.waves also works here ???
+                newNote.wavelength = waves
+                //
+                newNote.deletedDate = Date()
                 if (newNote.title != nil && newNote.desc != nil) {
                     
                 
@@ -109,6 +117,7 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
                 }
             }
         }
+    
         //Deleting Note
         @IBAction func DeleteNote(_ sender: Any)
         {//core data persistent container
