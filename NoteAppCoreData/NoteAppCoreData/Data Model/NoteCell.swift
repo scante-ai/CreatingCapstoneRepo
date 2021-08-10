@@ -8,3 +8,6 @@ class NoteCell: UITableViewCell
     //
     @IBOutlet weak var dateLabel: UILabel!
 }
+
+
+

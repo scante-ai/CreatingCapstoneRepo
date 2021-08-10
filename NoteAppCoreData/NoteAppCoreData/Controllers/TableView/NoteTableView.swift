@@ -55,8 +55,15 @@ class NoteTableView: UITableViewController
 		
 		noteCell.titleLabel.text = thisNote.title
 		noteCell.descLabel.text = thisNote.desc
-        //
-//        noteCell.dateLabel = thisNote.deletedDate
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+//
+//        self.subtitleLabel.text = "Edited on \(formatter.string(from: note.lastEdited))"
+        
+        //crash if deleted date doesn't exist
+        noteCell.dateLabel.text = formatter.string(from: thisNote.deletedDate!)
 		
 		return noteCell
 	}
