@@ -56,6 +56,7 @@ class NoteTableView: UITableViewController
 		noteCell.titleLabel.text = thisNote.title
 		noteCell.descLabel.text = thisNote.desc
         
+        
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
@@ -78,6 +79,7 @@ class NoteTableView: UITableViewController
 	{
 		tableView.reloadData()
 	}
+    
 //	//editing note when selected
 //	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 //	{//arrow going to NoteDetail
