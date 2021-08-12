@@ -16,7 +16,6 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     
     @IBOutlet weak var picker: UIPickerView!
     
-    // Input the data into the array
     var pickerData = [["0 ft", "15 ft", "30 ft", "50 ft"]]
     
 	override func viewDidLoad(){

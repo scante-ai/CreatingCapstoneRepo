@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+
 //seeing list of notes
 var noteList = [Note]()
 
@@ -32,11 +33,11 @@ class NoteTableView: UITableViewController
 				let results:NSArray = try context.fetch(request) as NSArray
 				for result in results
 				{//append fetched note to results
-                    print(result)
+//                    print(result)
 					let note = result as! Note
 					noteList.append(note)
 				}
-                print(noteList)
+//                print(noteList)
 			}
 			catch
 			{
@@ -46,6 +47,7 @@ class NoteTableView: UITableViewController
 	}
 	
 	
+    //declare cells in TableViews
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{ //calling noteCellID identifier, NoteCell class has labels with title and desc
 		let noteCell = tableView.dequeueReusableCell(withIdentifier: "noteCellID", for: indexPath) as! NoteCell
@@ -59,8 +61,7 @@ class NoteTableView: UITableViewController
         
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-//
+//        formatter.timeStyle = .short
 //        self.subtitleLabel.text = "Edited on \(formatter.string(from: note.lastEdited))"
         
         //crash if deleted date doesn't exist
@@ -69,7 +70,7 @@ class NoteTableView: UITableViewController
 		return noteCell
 	}
 	
-	//number of rows generated
+	//number of rows generated !
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 	{
 		return nonDeletedNotes().count
@@ -80,27 +81,32 @@ class NoteTableView: UITableViewController
 		tableView.reloadData()
 	}
     
-//	//editing note when selected
+    
+    
+//    
+//    //replace variable "selectedNote" in single view VC
+//    
+//	//Segue into single view page
 //	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 //	{//arrow going to NoteDetail
-//		self.performSegue(withIdentifier: "editNote", sender: self)
+//		self.performSegue(withIdentifier: "SummarySegue", sender: self)
 //	}
 //	//prepare segue
 //	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
 //	{
-//		if(segue.identifier == "editNote")
+//		if(segue.identifier == "SummarySegue")
 //		{
 //			let indexPath = tableView.indexPathForSelectedRow!
 //			
-//			let noteDetail = segue.destination as? NoteDetailVC
+//			let journalEntry = segue.destination as? SingleViewVC
 //			//select Note
-//			let selectedNote : Note!
-//			selectedNote = nonDeletedNotes()[indexPath.row]
-//			noteDetail!.selectedNote = selectedNote
+//			let selectedJournal : Note!
+//			selectedJournal = nonDeletedNotes()[indexPath.row]
+//			journalEntry!.selectedJournal = selectedJournal
 //			
 //			tableView.deselectRow(at: indexPath, animated: true)
 //		}
 //	}
-	
-	
+//	
+//	
 }
