@@ -6,20 +6,19 @@
 //
 
 import UIKit
+import CoreData
 
 //var noteList = [Note]()
-
-//Class SingleNote: UIViewController {
-//    @IBOutlet weak var Description1: UILabel!
-//    @IBOutlet weak var Title1: UILabel!
-//    @IBOutlet weak var Date1: UILabel!
-//    @IBOutlet weak var Wavelength: UILabel!
-//}
 
 
 
 
 class SingleViewVC: UIViewController {
+    
+    @IBOutlet weak var Description1: UILabel!
+    @IBOutlet weak var Title1: UILabel!
+    @IBOutlet weak var Date1: UILabel!
+    @IBOutlet weak var Wavelength: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
