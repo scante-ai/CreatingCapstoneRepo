@@ -31,6 +31,10 @@
 		607F9F6426BF57FF00EFB172 /* Wave2SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F9F6326BF57FF00EFB172 /* Wave2SwiftUIView.swift */; };
 		607F9F6626BF5CEF00EFB172 /* WaveThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F9F6526BF5CEF00EFB172 /* WaveThreeViewController.swift */; };
 		607F9F6926BF5D1900EFB172 /* Wave3SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F9F6826BF5D1900EFB172 /* Wave3SwiftUIView.swift */; };
+		8846F2ED26C556CE00473DDC /* ZeroFTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846F2EC26C556CE00473DDC /* ZeroFTVC.swift */; };
+		8846F2F226C5583900473DDC /* TwoFTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846F2EF26C5583800473DDC /* TwoFTVC.swift */; };
+		8846F2F326C5583900473DDC /* ThreeFTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846F2F026C5583900473DDC /* ThreeFTVC.swift */; };
+		8846F2F426C5583900473DDC /* OneFTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846F2F126C5583900473DDC /* OneFTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		607F9F6526BF5CEF00EFB172 /* WaveThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveThreeViewController.swift; sourceTree = "<group>"; };
 		607F9F6826BF5D1900EFB172 /* Wave3SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave3SwiftUIView.swift; sourceTree = "<group>"; };
 		7F66A98DE5B405E9C8FB5BCF /* Pods-NoteAppCoreData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteAppCoreData.debug.xcconfig"; path = "Target Support Files/Pods-NoteAppCoreData/Pods-NoteAppCoreData.debug.xcconfig"; sourceTree = "<group>"; };
+		8846F2EC26C556CE00473DDC /* ZeroFTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroFTVC.swift; sourceTree = "<group>"; };
+		8846F2EF26C5583800473DDC /* TwoFTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoFTVC.swift; sourceTree = "<group>"; };
+		8846F2F026C5583900473DDC /* ThreeFTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeFTVC.swift; sourceTree = "<group>"; };
+		8846F2F126C5583900473DDC /* OneFTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneFTVC.swift; sourceTree = "<group>"; };
 		C4F853FCD3C32199AEEB0548 /* Pods-NoteAppCoreData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteAppCoreData.release.xcconfig"; path = "Target Support Files/Pods-NoteAppCoreData/Pods-NoteAppCoreData.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +161,7 @@
 		607F9F4126BF49B000EFB172 /* Wave Animation */ = {
 			isa = PBXGroup;
 			children = (
+				8846F2EB26C556CE00473DDC /* FT */,
 				607F9F3D26BF36D600EFB172 /* WaveOptionsViewController.swift */,
 				607F9F6726BF5CFC00EFB172 /* WaveThree */,
 				607F9F6226BF57D600EFB172 /* WaveTwo */,
@@ -203,6 +212,17 @@
 				22F6A6FE398A3832A37C0353 /* Pods_NoteAppCoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8846F2EB26C556CE00473DDC /* FT */ = {
+			isa = PBXGroup;
+			children = (
+				8846F2EC26C556CE00473DDC /* ZeroFTVC.swift */,
+				8846F2F126C5583900473DDC /* OneFTVC.swift */,
+				8846F2F026C5583900473DDC /* ThreeFTVC.swift */,
+				8846F2EF26C5583800473DDC /* TwoFTVC.swift */,
+			);
+			path = FT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,10 +347,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				607F9F3E26BF36D600EFB172 /* WaveOptionsViewController.swift in Sources */,
+				8846F2F426C5583900473DDC /* OneFTVC.swift in Sources */,
+				8846F2F326C5583900473DDC /* ThreeFTVC.swift in Sources */,
 				2E37154B25C0FB980037351E /* NoteDetailVC.swift in Sources */,
 				607F9F6626BF5CEF00EFB172 /* WaveThreeViewController.swift in Sources */,
 				3EF77F8426C35094008884B9 /* SingleViewVC.swift in Sources */,
 				607F9F4026BF491900EFB172 /* WaveOneViewController.swift in Sources */,
+				8846F2F226C5583900473DDC /* TwoFTVC.swift in Sources */,
 				607F9F3A26BF31CD00EFB172 /* WaveExplanationViewController.swift in Sources */,
 				607F9F3C26BF328B00EFB172 /* ReturningMainViewController.swift in Sources */,
 				607F9F6926BF5D1900EFB172 /* Wave3SwiftUIView.swift in Sources */,
@@ -339,6 +362,7 @@
 				607F9F4326BF49F900EFB172 /* Wave1UIView.swift in Sources */,
 				2E37154725C0FB980037351E /* AppDelegate.swift in Sources */,
 				2E37155F25C101E20037351E /* NoteCell.swift in Sources */,
+				8846F2ED26C556CE00473DDC /* ZeroFTVC.swift in Sources */,
 				607F9F6126BF57CE00EFB172 /* WaveTwoViewController.swift in Sources */,
 				2E37155125C0FB980037351E /* NoteAppCoreData.xcdatamodeld in Sources */,
 				2E37154925C0FB980037351E /* SceneDelegate.swift in Sources */,

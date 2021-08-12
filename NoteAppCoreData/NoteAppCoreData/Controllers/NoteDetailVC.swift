@@ -5,6 +5,8 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     
     // Make global variable
     var waves:String = ""
+    // fixes entering EMPTY NOTE BUG
+    
 
 //Title text Field
 	@IBOutlet weak var titleTF: UITextField!
@@ -82,7 +84,23 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
                 {//saving to noteList array
                     try context.save()
                     noteList.append(newNote)
-                    navigationController?.popViewController(animated: true)
+//                    navigationController?.popViewController(animated: true)
+                    if waves == "0 ft"
+                    {
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ZeroFTVC") as? ZeroFTVC
+                        self.navigationController?.pushViewController(vc!, animated: true)
+                    }else if waves == "15 ft"{
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "OneFTVC") as? OneFTVC
+                        self.navigationController?.pushViewController(vc!, animated: true)
+                    }else if waves == "30 ft"{
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TwoFTVC") as? TwoFTVC
+                        self.navigationController?.pushViewController(vc!, animated: true)
+                    }else if waves == "50 ft"{
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ThreeFTVC") as? ThreeFTVC
+                        self.navigationController?.pushViewController(vc!, animated: true)
+                    }
+                    
+
                 }
                 catch
                 {
@@ -91,6 +109,9 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
                     
                 }
             }
+            
+            
+            
             
             //if selected note is not empty
             else //edit
@@ -117,6 +138,8 @@ class NoteDetailVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
             }
         }
     
+    
+            
         //Deleting Note
         @IBAction func DeleteNote(_ sender: Any)
         {//core data persistent container

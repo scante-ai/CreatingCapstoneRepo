@@ -23,6 +23,8 @@ class NoteTableView: UITableViewController
 	
 	override func viewDidLoad()
 	{//load firstload that has array of notes
+        //Just empty array when back to again array should be empty.
+        noteList = []
 		if(firstLoad)
 		{
 			firstLoad = false //? set it false
@@ -56,7 +58,7 @@ class NoteTableView: UITableViewController
 		thisNote = nonDeletedNotes()[indexPath.row]
 		
 		noteCell.titleLabel.text = thisNote.title
-		noteCell.descLabel.text = thisNote.desc
+//		noteCell.descLabel.text = thisNote.desc
         
         
         let formatter = DateFormatter()
@@ -92,21 +94,22 @@ class NoteTableView: UITableViewController
 //		self.performSegue(withIdentifier: "SummarySegue", sender: self)
 //	}
 //	//prepare segue
-//	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//	{
-//		if(segue.identifier == "SummarySegue")
-//		{
-//			let indexPath = tableView.indexPathForSelectedRow!
-//			
-//			let journalEntry = segue.destination as? SingleViewVC
-//			//select Note
-//			let selectedJournal : Note!
-//			selectedJournal = nonDeletedNotes()[indexPath.row]
-//			journalEntry!.selectedJournal = selectedJournal
-//			
-//			tableView.deselectRow(at: indexPath, animated: true)
-//		}
-//	}
-//	
-//	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+	{
+        //Pass data to view details screen.
+		if(segue.identifier == "SummarySegue")
+		{
+			let indexPath = tableView.indexPathForSelectedRow!
+			
+			let journalEntry = segue.destination as? SingleViewVC
+			//select Note
+			let selectedJournal : Note!
+			selectedJournal = nonDeletedNotes()[indexPath.row]
+			journalEntry!.selectedJournal = selectedJournal
+			
+			tableView.deselectRow(at: indexPath, animated: true)
+		}
+	}
+	
+	
 }
